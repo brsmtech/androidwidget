@@ -19,3 +19,15 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+-keep class com.bstech.widlib.view.EditTextView
+-keep class com.bstech.widlib.view.EditTextView$* { *; }
+
+-keep class com.bstech.widlib.util.Validation
+-keep class com.bstech.widlib.util.Validation$* { *; }
+
+-keep class com.bstech.widlib.view.EditText2View
+-keep class com.bstech.widlib.view.EditText2View$* { *; }
+
+-keep class com.bsoft.android.core.widget.NiceTextView
+-keep class com.bsoft.android.core.widget.NiceTextView$* { *; }
