@@ -12,9 +12,7 @@ import com.bstech.widlib.R
  * Created by brayskiy on 2/22/18.
  */
 
-class NiceTextView @JvmOverloads
-constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
-    : RelativeLayout(context, attrs, defStyleAttr) {
+class NiceTextView : RelativeLayout {
 
     private lateinit var niceText: String
     private lateinit var niceImage: ImageView
@@ -25,7 +23,9 @@ constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
     private var textSize: Float = 0.toFloat()
     private var textPadding: Float = 0.toFloat()
 
-    init {
+    constructor(context: Context) : this(context, null)
+    constructor(context: Context, attrs: AttributeSet?) : this(context, attrs, 0)
+    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
         if (!isInEditMode) {
             init(context, attrs, defStyleAttr)
         }
