@@ -31,3 +31,8 @@
 
 -keep class com.bstech.widlib.view.NiceTextView
 -keep class com.bstech.widlib.view.NiceTextView$* { *; }
+
+-keepclassmembers class com.bstech.widlib.** {
+  <init>(...);
+  <fields>;
+}
