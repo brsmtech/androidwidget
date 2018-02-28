@@ -29,5 +29,5 @@
 -keep class com.bstech.widlib.view.EditText2View
 -keep class com.bstech.widlib.view.EditText2View$* { *; }
 
--keep class com.bsoft.android.core.widget.NiceTextView
--keep class com.bsoft.android.core.widget.NiceTextView$* { *; }
+-keep class com.bstech.widlib.view.NiceTextView
+-keep class com.bstech.widlib.view.NiceTextView$* { *; }
