@@ -26,6 +26,9 @@
 -keep class com.bstech.widlib.util.Validation
 -keep class com.bstech.widlib.util.Validation$* { *; }
 
+-keep class com.bstech.widlib.util.FontManager
+-keep class com.bstech.widlib.util.FontManager$* { *; }
+
 -keep class com.bstech.widlib.view.EditText2View
 -keep class com.bstech.widlib.view.EditText2View$* { *; }
 
