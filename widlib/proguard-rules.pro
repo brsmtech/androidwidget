@@ -39,3 +39,7 @@
   <init>(...);
   <fields>;
 }
+
+-keep class class com.bstech.widlib.** {
+    public <methods>;
+}
