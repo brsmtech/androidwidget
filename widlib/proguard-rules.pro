@@ -40,6 +40,6 @@
   <fields>;
 }
 
--keep class class com.bstech.widlib.** {
+-keep class com.bstech.widlib.** {
     public <methods>;
 }
