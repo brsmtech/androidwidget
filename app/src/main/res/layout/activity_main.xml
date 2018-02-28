@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bstech="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_dark"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".activity.MainActivity">
+
+    <com.bstech.widlib.view.NiceTextView
+        android:id="@+id/edit_text_view_login_demo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="48dp"
+        android:text="Edit Text Login Demo"
+        android:textColor="@android:color/transparent"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        bstech:backgroundColor="@drawable/background_nice_text_main"
+        bstech:textStrokeColor="@android:color/black"
+        bstech:textPadding="12dp"
+        bstech:textStrokeWidth="2dip" />
+
+    <com.bstech.widlib.view.NiceTextView
+        android:id="@+id/edit_text_view_password_demo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
+        android:text="Edit Text Password Demo"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="42sp"
+        android:textStyle="bold"
+        bstech:backgroundColor="@drawable/background_nice_text_main"
+        bstech:textPadding="12dp"
+        bstech:textStrokeColor="@android:color/white"
+        bstech:textStrokeWidth="3dip" />
+
+    <com.bstech.widlib.view.NiceTextView
+        android:id="@+id/nice_text_view_demo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
+        android:text="Nice Text Demo"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="42sp"
+        android:textStyle="bold"
+        bstech:backgroundColor="@drawable/background_nice_text_main"
+        bstech:textPadding="12dp"
+        bstech:textStrokeColor="@android:color/white"
+        bstech:textStrokeWidth="3dip" />
+
+    <com.bstech.widlib.view.NiceTextView
+        android:id="@+id/font_text_view_demo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
+        android:text="Font Text View Demo"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        bstech:backgroundColor="@drawable/background_nice_text_main"
+        bstech:textPadding="12dp"
+        bstech:textStrokeColor="@android:color/white"
+        bstech:textStrokeWidth="3dip" />
+
+</LinearLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bstech="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".activity.NiceTextViewActivity">
+
+    <com.bstech.widlib.view.NiceTextView
+        android:id="@+id/nice_text_view1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:text="Nice Text Example 1"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        bstech:backgroundColor="@drawable/background_nice_text_view1"
+        bstech:textPadding="12dp"
+        bstech:textStrokeColor="@android:color/white"
+        bstech:textStrokeWidth="2dip" />
+
+    <com.bstech.widlib.view.NiceTextView
+        android:id="@+id/nice_text_view2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:text="Nice Text Example 2"
+        android:textColor="@android:color/transparent"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        bstech:backgroundColor="@drawable/background_nice_text_view2"
+        bstech:textPadding="8dp"
+        bstech:textStrokeColor="@android:color/holo_orange_light"
+        bstech:textStrokeWidth="1dip" />
+
+</LinearLayout>

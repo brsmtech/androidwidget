@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:font="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/edit_text_view_message_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        android:background="@color/transparent">
+
+        <com.bstech.widlib.view.FontTextView
+            android:id="@+id/edit_text_view_message_symbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:layout_gravity="center_vertical"
+            font:fontName="iconFonts"
+            android:text="e"/>
+
+        <TextView
+            android:id="@+id/edit_text_view_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:maxLines="1"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/edit_text_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/transparent">
+
+        <LinearLayout
+            android:id="@+id/edit_text_view_clear"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/edit_text_view_clear_image"
+                android:layout_width="12sp"
+                android:layout_height="12sp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_clear_white_24px"
+                android:background="@color/transparent" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/edit_text_view_input"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/edit_text_view_clear"
+            android:backgroundTint="@color/transparent"
+            android:paddingLeft="8dp"
+            android:paddingStart="8dp"
+            android:maxLines="1"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

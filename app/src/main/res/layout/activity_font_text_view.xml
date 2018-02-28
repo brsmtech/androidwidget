@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bstech="http://schemas.android.com/apk/res-auto"
+    xmlns:font="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".activity.NiceTextViewActivity">
+
+    <com.bstech.widlib.view.FontTextView
+        android:id="@+id/font_text_view1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:text="a b c d e f g h i j k l m n o p q r s t u v w x y z"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        font:fontName="iconFonts" />
+
+    <com.bstech.widlib.view.FontTextView
+        android:id="@+id/font_text_view2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:text="A B C D E F G H I J K L M N O P Q R S T U V W X Y Z"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        font:fontName="iconFonts" />
+
+</LinearLayout>

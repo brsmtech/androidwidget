@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bstech="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".activity.LoginActivity">
+
+    <com.bstech.widlib.view.NiceTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Login Activity"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        bstech:textPadding="12dp"
+        bstech:backgroundColor="@drawable/background_nice_text_view"
+        bstech:textStrokeColor="@android:color/white"
+        bstech:textStrokeWidth="2dip" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="64dp">
+
+        <com.bstech.widlib.view.EditTextView
+            android:id="@+id/login_email"
+            style="@style/EditTextView"
+            android:hint="your@email.com"
+            android:inputType="textEmailAddress"
+            android:nextFocusForward="@+id/login_password"
+            bstech:clear="true"
+            bstech:maxLength="128"
+            bstech:message="Enter valid e-mail" />
+
+        <com.bstech.widlib.view.EditTextView
+            android:id="@+id/login_password"
+            style="@style/EditTextView"
+            android:hint="Enter your password"
+            android:inputType="textPassword"
+            bstech:clear="true"
+            bstech:maxLength="128"
+            bstech:message="Enter valid password" />
+
+    </LinearLayout>
+
+    <com.bstech.widlib.view.NiceTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Login"
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        bstech:backgroundColor="@drawable/background_login_button"
+        bstech:textPadding="8dp"
+        bstech:textStrokeColor="@android:color/black"
+        bstech:textStrokeWidth="3dip" />
+
+</LinearLayout>
