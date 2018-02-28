@@ -179,45 +179,18 @@ constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
         })
     }
 
-    fun setValidation(validation: Validation.Action) {
-        validationAction = validation
-    }
-
-    fun setOnEditTextListener(listener: EditTextListener) {
-        editTextListener = listener
-    }
-
-    fun setInputType(inputType: Int) {
-        editTextViewInput.inputType = inputType
-    }
-
-    fun setImeOptions(imeOptions: Int) {
-        editTextViewInput.imeOptions = imeOptions
-    }
-
-    fun setHint(hint: CharSequence) {
-        editTextViewInput.hint = hint
-    }
-
-    fun setHint(hint: Int) {
-        editTextViewInput.setHint(hint)
-    }
-
-    fun length(): Int {
-        return editTextViewInput.length()
-    }
-
-    fun setSelection(selection: Int) {
-        editTextViewInput.setSelection(selection)
-    }
-
-    fun clearText() {
-        editTextViewClear.performClick()
-    }
-
-    fun clearMessage() {
-        editTextViewMessageContainer.visibility = View.INVISIBLE
-    }
+    fun setValidation(validation: Validation.Action) { validationAction = validation }
+    fun setOnEditTextListener(listener: EditTextListener) { editTextListener = listener }
+    fun setInputType(inputType: Int) { editTextViewInput.inputType = inputType }
+    fun setImeOptions(imeOptions: Int) { editTextViewInput.imeOptions = imeOptions }
+    fun setHint(hint: CharSequence) { editTextViewInput.hint = hint }
+    fun setHint(hint: Int) { editTextViewInput.setHint(hint) }
+    fun length(): Int { return editTextViewInput.length() }
+    fun setSelection(selection: Int) { editTextViewInput.setSelection(selection) }
+    fun clearText() { editTextViewClear.performClick() }
+    fun clearMessage() { editTextViewMessageContainer.visibility = View.INVISIBLE }
+    fun setMessage(message: String) { editTextViewMessage.text = message }
+    fun getMessage(): String { return editTextViewMessage.text.toString() }
 
     fun validate(): Boolean {
         val text = editTextViewInput.text.toString()
