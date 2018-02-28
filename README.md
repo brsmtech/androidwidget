@@ -1,60 +1,104 @@
-# Project Title
+# Android Widget Library
 
-One Paragraph of project description goes here
+The collection of the Android custom widgets.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-What things you need to install the software and how to install them
+```
+git clone https://github.com/brsmtech/androidwidget.git
+cd androidwidget
+./gradlew assembleDebug
 
 ```
-Give examples
+
+## Library Contents
+
+### EditTextView
+
 ```
+<com.bstech.widlib.view.EditTextView
+    android:id="@+id/login_email"
+    style="@style/EditTextView"
+    android:hint="your@email.com"
+    android:inputType="textEmailAddress"
+    android:nextFocusForward="@+id/login_password"
+    bstech:clear="true"
+    bstech:maxLength="128"
+    bstech:message="Enter valid e-mail" />
+```
+
+### EditText2View
+
+```
+<com.bstech.widlib.view.EditText2View
+    android:id="@+id/password"
+    style="@style/EditTextView"
+    android:inputType="textPassword"
+    android:nextFocusForward="@+id/login_password"
+    bstech:clear="true"
+    bstech:maxLength="128"
+    bstech:backgroundColor="@drawable/background_edit_text_view"
+    bstech:message="Enter valid password"
+    bstech:hint1="Create New Password"
+    bstech:hint2="Repeat Password"
+    bstech:message1="Wrong password format"
+    bstech:message2="Password not matching"/>
+```
+
+### NiceTextView
+
+```
+<com.bstech.widlib.view.NiceTextView
+    android:id="@+id/password_continue"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:text="CONTINUE"
+    android:textColor="@android:color/holo_orange_light"
+    android:textSize="36sp"
+    android:textStyle="bold"
+    bstech:backgroundColor="@drawable/background_login_button"
+    bstech:textPadding="8dp"
+    bstech:textStrokeColor="@android:color/black"
+    bstech:textStrokeWidth="3dip" />
+```
+
 
 ### Installing
 
 A step by step series of examples that tell you have to get a development env running
 
-Say what the step will be
+#### Project level gradle.build
 
 ```
-Give the example
+allprojects {
+    repositories {
+	        ...
+	        maven { url 'https://jitpack.io' }
+    }
+}
 ```
 
-And repeat
+#### App level gradle.build
 
 ```
-until finished
+dependencies {
+		compile 'com.github.brsmtech:androidwidget:1.0'
+	}
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+#### Application or Activity class
 
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
 
 ```
-Give an example
+override fun onCreate() {
+    super.onCreate()
+
+    ....
+    FontManager.init(assets)
+    ....
+}
 ```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
 
 ## Built With
 
@@ -70,17 +114,15 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Boris Rayskiy** - *Initial work* - [b&s Tech Corp.](https://github.com/brayskiy)
+* **Boris Rayskiy**https://github.com/brayskiy - *Initial work*
 
 See also the list of [contributors](https://github.com/brsmtech/androidwidgets/contributors) who participated in this project.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+See the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+* 
 
