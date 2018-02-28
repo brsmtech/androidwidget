@@ -2,8 +2,7 @@
 
 The collection of the Android custom widgets.
 
-[![Release](https://jitpack.io/v/brsmtech/androidwidget.svg)]
-(https://jitpack.io/#brsmtech/androidwidget)
+[![](https://jitpack.io/v/brsmtech/androidwidget.svg)](https://jitpack.io/#brsmtech/androidwidget)
 
 ## Getting Started
 
