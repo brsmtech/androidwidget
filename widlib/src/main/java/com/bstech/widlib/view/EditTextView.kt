@@ -26,9 +26,7 @@ import com.bstech.widlib.util.Validation
  * Created by brayskiy on 11/28/17.
  */
 
-class EditTextView @JvmOverloads
-constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
-    : LinearLayout(context, attrs, defStyleAttr) {
+class EditTextView : LinearLayout {
 
     private var editTextListener: EditTextListener? = null
 
@@ -67,7 +65,9 @@ constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
         fun run()
     }
 
-    init {
+    constructor(context: Context) : this(context, null)
+    constructor(context: Context, attrs: AttributeSet?) : this(context, attrs, 0)
+    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
         if (!isInEditMode) {
             init(context, attrs, defStyleAttr)
         }

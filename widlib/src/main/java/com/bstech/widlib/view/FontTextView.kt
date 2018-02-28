@@ -10,13 +10,13 @@ import com.bstech.widlib.util.FontManager
  * Created by brayskiy on 9/28/16.
  */
 
-class FontTextView @JvmOverloads
-constructor(context: Context, attrs: AttributeSet? = null, defStyle: Int = 0)
-    : AppCompatTextView(context, attrs, defStyle) {
+class FontTextView : AppCompatTextView {
 
-    init {
+    constructor(context: Context) : this(context, null)
+    constructor(context: Context, attrs: AttributeSet?) : this(context, attrs, 0)
+    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
         if (!isInEditMode) {
-            init(attrs, defStyle)
+            init(attrs, defStyleAttr)
         }
     }
 
