@@ -83,7 +83,7 @@ allprojects {
 
 ```
 dependencies {
-		compile 'com.github.brsmtech:androidwidget:1.0'
+		compile 'com.github.brsmtech:androidwidget:v1.0.0'
 	}
 ```
 
@@ -114,7 +114,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Boris Rayskiy**https://github.com/brayskiy - *Initial work*
+* **Boris Rayskiy**(https://github.com/brayskiy) - *Initial work*
 
 See also the list of [contributors](https://github.com/brsmtech/androidwidgets/contributors) who participated in this project.
 
