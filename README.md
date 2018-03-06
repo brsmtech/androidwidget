@@ -4,6 +4,8 @@ The collection of the Android custom widgets.
 
 [![](https://jitpack.io/v/brsmtech/androidwidget.svg)](https://jitpack.io/#brsmtech/androidwidget)
 
+[![API](https://img.shields.io/badge/API-17%2B-yellow.svg?style=flat)](https://android-arsenal.com/api?level=17)
+
 ## Getting Started
 
 ```
