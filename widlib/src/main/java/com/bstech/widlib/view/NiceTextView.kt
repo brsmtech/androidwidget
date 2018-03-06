@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.widget.ImageView
 import android.widget.RelativeLayout
 import com.bstech.widlib.R
+import org.jetbrains.annotations.Nullable
 
 /**
  * Created by brayskiy on 2/22/18.
@@ -86,6 +87,8 @@ class NiceTextView : RelativeLayout {
     }
 
     private fun setText() {
+        if ((niceText == null) || (niceText.isEmpty())) return
+
         val textBounds = Rect()
         textPaint.getTextBounds(niceText, 0, niceText.length, textBounds)
 
@@ -98,7 +101,10 @@ class NiceTextView : RelativeLayout {
         val canvas = Canvas(bitmap)
 
         val textX = textBounds.width() / 2 + paddingX / 2
-        val textY = height + textBounds.height();
+
+        val h = height
+
+        val textY = textBounds.height()
         canvas.drawText(niceText, textX.toFloat(), textY.toFloat(), textStrokePaint)
         canvas.drawText(niceText, textX.toFloat(), textY.toFloat(), textPaint)
 
