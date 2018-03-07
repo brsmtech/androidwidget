@@ -4,7 +4,6 @@ import android.content.Context
 import android.graphics.*
 import android.util.AttributeSet
 import android.view.LayoutInflater
-import android.view.View
 import android.widget.ImageView
 import android.widget.RelativeLayout
 import com.bstech.widlib.R
@@ -76,7 +75,6 @@ class NiceTextView : RelativeLayout {
                 setText()
             } else {
                 niceImage?.setImageBitmap(null)
-                visibility = View.INVISIBLE
             }
 
             typedArray.recycle()
@@ -93,7 +91,6 @@ class NiceTextView : RelativeLayout {
             setText()
         } else {
             niceImage?.setImageBitmap(null)
-            visibility = View.INVISIBLE
         }
     }
 
@@ -122,7 +119,6 @@ class NiceTextView : RelativeLayout {
             }
         }
 
-        visibility = if (bitmap == null) View.INVISIBLE else View.VISIBLE
         niceImage?.setImageBitmap(bitmap)
     }
 
