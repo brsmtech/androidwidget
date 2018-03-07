@@ -40,4 +40,18 @@
         bstech:textStrokeColor="@android:color/holo_orange_light"
         bstech:textStrokeWidth="1dip" />
 
+    <com.bstech.widlib.view.NiceTextView
+        android:id="@+id/nice_text_view3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        bstech:backgroundColor="@drawable/background_nice_text_view3"
+        bstech:textPadding="8dp"
+        bstech:textStrokeColor="@android:color/black"
+        bstech:textStrokeWidth="2dip" />
+
 </LinearLayout>

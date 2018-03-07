@@ -42,6 +42,7 @@ public class NiceTextViewTest {
 
         NiceTextView view1 = activity.getActivity().findViewById(R.id.nice_text_view1);
         NiceTextView view2 = activity.getActivity().findViewById(R.id.nice_text_view2);
+        NiceTextView view3 = activity.getActivity().findViewById(R.id.nice_text_view3);
 
         activity.getActivity().runOnUiThread(() -> view1.setText(""));
 
@@ -65,6 +66,20 @@ public class NiceTextViewTest {
             }
         }
 
+        {
+            final StringBuilder outStr = new StringBuilder();
+            for (char ch = 'a'; ch < 'z'; ++ch) {
+                outStr.append(ch);
+                activity.getActivity().runOnUiThread(() -> view3.setText(outStr.toString()));
+                api.sleep(300);
+                activity.getActivity().runOnUiThread(() -> view3.setText(""));
+                api.sleep(300);
+                activity.getActivity().runOnUiThread(() -> view3.setText(null));
+                api.sleep(300);
+            }
+        }
+
+        activity.getActivity().runOnUiThread(() -> view2.setText(null));
         activity.getActivity().runOnUiThread(() -> view1.setText("All Done"));
 
         api.sleep(2000);
