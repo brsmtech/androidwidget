@@ -45,7 +45,8 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:visibility="gone">
+            android:visibility="gone"
+            android:background="@color/transparent">
 
             <ImageView
                 android:id="@+id/edit_text_view_clear_image"

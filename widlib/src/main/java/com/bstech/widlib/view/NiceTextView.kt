@@ -4,6 +4,7 @@ import android.content.Context
 import android.graphics.*
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import android.view.View
 import android.widget.ImageView
 import android.widget.RelativeLayout
 import com.bstech.widlib.R
@@ -15,8 +16,8 @@ import org.jetbrains.annotations.Nullable
 
 class NiceTextView : RelativeLayout {
 
-    private lateinit var niceText: String
-    private lateinit var niceImage: ImageView
+    private var niceText: String? = null
+    private var niceImage: ImageView? = null
 
     private val textStrokePaint = Paint()
     private val textPaint = Paint()
@@ -71,7 +72,12 @@ class NiceTextView : RelativeLayout {
             textStrokePaint.strokeWidth = textStrokeWidth
 
             niceText = typedArray.getString(R.styleable.NiceTextView_android_text)
-            setText()
+            if (niceText != null) {
+                setText()
+            } else {
+                niceImage?.setImageBitmap(null)
+                visibility = View.INVISIBLE
+            }
 
             typedArray.recycle()
         }
@@ -81,34 +87,43 @@ class NiceTextView : RelativeLayout {
         setText(resources.getString(textId))
     }
 
-    fun setText(text: String) {
+    fun setText(@Nullable text: String?) {
         niceText = text
-        setText()
+        if (niceText != null) {
+            setText()
+        } else {
+            niceImage?.setImageBitmap(null)
+            visibility = View.INVISIBLE
+        }
     }
 
     private fun setText() {
-        if ((niceText == null) || (niceText.isEmpty())) return
+        var bitmap: Bitmap? = null
+        if (niceText != null) {
+            val textLength = niceText?.length ?: 0
 
-        val textBounds = Rect()
-        textPaint.getTextBounds(niceText, 0, niceText.length, textBounds)
+            if (textLength > 0) {
+                val textBounds = Rect()
+                textPaint.getTextBounds(niceText, 0, textLength, textBounds)
 
-        val paddingX = textPadding.toInt()
-        val paddingY = textPadding.toInt()
+                val paddingX = textPadding.toInt()
+                val paddingY = textPadding.toInt()
 
-        val bitmap = Bitmap.createBitmap(
-                textBounds.width() + paddingX, textBounds.height() + paddingY,
-                Bitmap.Config.ARGB_8888)
-        val canvas = Canvas(bitmap)
+                bitmap = Bitmap.createBitmap(
+                        textBounds.width() + paddingX, textBounds.height() + paddingY,
+                        Bitmap.Config.ARGB_8888)
+                val canvas = Canvas(bitmap)
 
-        val textX = textBounds.width() / 2 + paddingX / 2
+                val textX = textBounds.width() / 2 + paddingX / 2
 
-        val h = height
+                val textY = textBounds.height()
+                canvas.drawText(niceText, textX.toFloat(), textY.toFloat(), textStrokePaint)
+                canvas.drawText(niceText, textX.toFloat(), textY.toFloat(), textPaint)
+            }
+        }
 
-        val textY = textBounds.height()
-        canvas.drawText(niceText, textX.toFloat(), textY.toFloat(), textStrokePaint)
-        canvas.drawText(niceText, textX.toFloat(), textY.toFloat(), textPaint)
-
-        niceImage.setImageBitmap(bitmap)
+        visibility = if (bitmap == null) View.INVISIBLE else View.VISIBLE
+        niceImage?.setImageBitmap(bitmap)
     }
 
     fun setBackgroundDrawable(color: Int) {
